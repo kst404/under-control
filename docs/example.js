@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
 
+/*
+deep merge libraries
+https://github.com/KyleAMathews/deepmerge
+https://github.com/kolodny/immutability-helper
+https://github.com/rtfeldman/seamless-immutable
+ */
+
 function makeChangeHandlers(state) {
 
 }

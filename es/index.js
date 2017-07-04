@@ -1,16 +1,10 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-exports.default = function (fragment) {
+export default (function (fragment) {
   var handlers = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return function (callback) {
     //TODO: write test for custom handlers (second argument)
@@ -36,4 +30,4 @@ exports.default = function (fragment) {
 
     return Object.assign({}, runner(fragment), handlers);
   };
-};
+});

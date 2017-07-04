@@ -51,24 +51,26 @@ describe('underControl', () => {
   })
 
 
-  // it('works', () => {
-  //   const state = {
-  //     otherProps: "",
-  //     controlledFragment: {
-  //       prop1: "",
-  //       prop2: "",
-  //       nestedProps: {
-  //         nestedProp1: "",
-  //         nestedProp2: "",
-  //       },
-  //     },
-  //   }
-  //
-  //   const change = underControl(state.controlledFragment)((fragment) => {
-  //     console.log('new data', fragment)
-  //   })
-  //
-  //   change.productProperties.color({ target: { value: 'test' } })
-  //
-  // })
+  it('works', () => {
+    const state = {
+      otherProps: "",
+      controlledFragment: {
+        prop1: "",
+        prop2: "",
+        nestedProps: {
+          nestedProp1: "",
+          nestedProp2: "",
+        },
+      },
+    }
+
+    const change = underControl(state.controlledFragment)((fragment) => {
+      console.log('new data', fragment)
+    })
+
+    console.log(change)
+
+    change.nestedProps.nestedProp1({ target: { value: 'test' } })
+
+  })
 })
