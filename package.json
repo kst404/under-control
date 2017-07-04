@@ -26,7 +26,18 @@
     "test": "jest --env=node --watch"
   },
   "babel": {
+    "plugins": [
+      [
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ],
     "env": {
+      "test": {
+        "presets": ["es2015"]
+      },
       "commonjs": {
         "presets": [
           [
@@ -39,14 +50,6 @@
                 ]
               },
               "modules": "commonjs"
-            }
-          ]
-        ],
-        "plugins": [
-          [
-            "transform-object-rest-spread",
-            {
-              "useBuiltIns": true
             }
           ]
         ]
@@ -63,14 +66,6 @@
                 ]
               },
               "modules": false
-            }
-          ]
-        ],
-        "plugins": [
-          [
-            "transform-object-rest-spread",
-            {
-              "useBuiltIns": true
             }
           ]
         ]
